@@ -34,7 +34,7 @@ Below are your classmates' notes, day by day.
 <ul>
 {% for ex in site.data.scribe %}
   <li>
-    <a href="files/scribe/{{ ex.scribe }}">
+    <a href="/files/scribe/{{ ex.scribe }}">
       {{ ex.scribe }}
     </a>
   </li>
