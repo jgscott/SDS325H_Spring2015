@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resources
-BASE_PATH: /SDS325H_Spring2015
+BASE_PATH: /SDS325H_Spring2015/
 ---
 
 Course packet
@@ -10,7 +10,7 @@ Course packet
 This is in a state of continual editing, so I will post the
   chapters as they become relevant. 
 
-* [Introduction](/files/files/00-FrontMatter-Intro.pdf)  
+* [Introduction](/files/00-FrontMatter-Intro.pdf)  
 * [Chapter 1](/files/01-ExplanationsAndEvidence.pdf)
 * [Chapter 2](/files/02-ExploringMultivariateData.pdf)
 
