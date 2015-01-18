@@ -29,16 +29,3 @@ Good places to get help with R
 *[Stack Overflow](http://stackoverflow.com). Just search for a relevant question and somebody has probably answered it before.
 
 
-Scribe reports
---------------
-Below are your classmates' notes, day by day.
-
-<ul>
-{% for ex in site.data.scribe %}
-  <li>
-    <a href="/files/scribe/{{ ex.scribe }}">
-      {{ ex.scribe }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
