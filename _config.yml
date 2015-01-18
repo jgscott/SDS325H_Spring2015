@@ -7,7 +7,7 @@ BASE_PATH: /SDS325H_Spring2015
 theme:
   # Meta
   title: SDS 325H (Spring 2015)
-  avatar: avatar.png
+  avatar: {{ site.baseurl }}/avatar.png
   gravatar: # email md5 hash
   description: "SDS 325H: Honors Statistics at UT-Austin." # used by search engines
   
