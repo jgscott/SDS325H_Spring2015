@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Resources
+BASE_PATH: /SDS325H_Spring2015
 ---
 
 Course packet
