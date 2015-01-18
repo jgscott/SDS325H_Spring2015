@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/SDS325H_Spring2015/" # the subpath of your site, e.g. /blog/
+baseurl: "/SDS325H_Spring2015" # the subpath of your site, e.g. /blog
 url: "http://jgscott.github.io" # the base hostname & protocol for your site
 BASE_PATH: /SDS325H_Spring2015
 
