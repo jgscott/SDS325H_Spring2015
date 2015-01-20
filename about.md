@@ -12,7 +12,7 @@ UT-Austin.  Use the nav bar above to access all course materials.
 
 Instructor: James Scott  
 Office: CBA 6.478  
-Office hours: Wednesdays 3:30 to 5:30  
+Office hours: MW 3:30 to 4:30  
 E-mail: james.scott@mccombs.utexas.edu  
 
 TA: Nalin Ratnayeke  
