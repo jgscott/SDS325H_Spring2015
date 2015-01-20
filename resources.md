@@ -25,7 +25,6 @@ Other readings
 
 Good places to get help with R
 ------------------------------
-*[R Seek](http://rseek.org).  A front-end for Google that helps get more Relevant results.
-*[Stack Overflow](http://stackoverflow.com). Just search for a relevant question and somebody has probably answered it before.
-
-
+*[R Seek](http://rseek.org).  A front-end for Google that helps get more Relevant results.  
+*[Stack Overflow](http://stackoverflow.com). Just search for a relevant question and somebody has probably answered it before.  
+  
