@@ -36,6 +36,7 @@
 - data: sdrapcty.txt
 - data: seatbelts.csv
 - data: semicon.csv
+- data: shocks.csv
 - data: springbok.csv
 - data: sumsq.csv
 - data: TitanicSurvival.csv
