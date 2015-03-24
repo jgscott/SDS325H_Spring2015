@@ -5,11 +5,13 @@ xtabs(~treat+outcome, data=respir)
 
 # Is baseline health consistent across the two groups?
 t_base = xtabs(~treat+baseline, data=subset(respir, visit==4))
+t_base_propr = prop.table(t_base)
 relrisk(t_base)
 
 # Permutation test
 perm1 = do(1000)*{
   t_shuff = xtabs(~shuffle(treat)+baseline, data=subset(respir, visit==4))
+  t_shuff = prop.
   relrisk(t_shuff)
 }
 hist(perm1$RR)
@@ -29,7 +31,7 @@ abline(v=relrisk(t_final), col='red')
 
 # Compute tail area
 sum(perm2$RR > relrisk(t_final))
-
+24/1000
 
 ## Problem 2
 # Read in georgia2000 data set
@@ -79,16 +81,20 @@ lm_perm = lm(undercount ~ poor + urban + atlanta + repshare + shuffle(equip), da
 summary(lm_perm)
 
 # Now repeat
-perm_test = do(1000)*{
+perm_test = do(10000)*{
   lm_perm = lm(undercount ~ poor + urban + atlanta + repshare + shuffle(equip), data=georgia2000)
   lm_perm
 }
 
 head(perm_test)
 hist(perm_test$r.squared)
-
+abline(v = 0.2729, col='red')
 # Compare with R-squared from the model with the real equipment variable
 summary(lm2)
+
+# Compute alpha
+sum(perm_test$r.squared > 0.25)
+
 
 # Compute a p-value
 sum(perm_test$r.squared > 0.2729)
