@@ -9,20 +9,21 @@ Course packet
 This is in a state of continual editing, so I will post the
   chapters as they become relevant. 
 
-* [Introduction]({{ site.baseurl }}/files/00-FrontMatter-Intro.pdf)  
+* [Introduction]({{ site.baseurl }}/files/00-FrontMatter-Intro.pdf)    
 * [Chapter 1]({{ site.baseurl }}/files/01-ExplanationsAndEvidence.pdf)  
 * [Chapter 2]({{ site.baseurl }}/files/02-ExploringMultivariateData.pdf)  
-* [Chapter 3]({{ site.baseurl }}/files/03-PredictableAndUnpredictableVariation.pdf)  
+* [Chapter 3]({{ site.baseurl }}/files/03-PredictableAndUnpredictableVariation.pdf)   
 * [Chapter 4]({{ site.baseurl }}/files/04-GroupingVariables.pdf)  
 * [Chapter 5]({{ site.baseurl }}/files/05-QuantifyingUncertaintyPart1.pdf)   
-* [Chapter 6]({{ site.baseurl }}/files/06-MultipleRegression.pdf)   
+* [Chapter 6]({{ site.baseurl }}/files/06-MultipleRegression.pdf)  
 * [Chapter 7]({{ site.baseurl }}/files/07-QuantifyingUncertaintyPart2.pdf)   
+* [Chapter 8]({{ site.baseurl }}/files/08-VariationInTime.pdf)  
+* [Chapter 9]({{ site.baseurl }}/files/09-BinaryOutcomes.pdf)  
 
 ### Notes on probability
 * [Probability]({{ site.baseurl }}/files/probability.pdf)  
 * [Random variables]({{ site.baseurl }}/files/randomvariables.pdf)   
 * [Utility]({{ site.baseurl }}/files/utility.pdf)   
-
 
 
 Other readings
