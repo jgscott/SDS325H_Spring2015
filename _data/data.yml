@@ -38,6 +38,8 @@
 - data: seatbelts.csv
 - data: semicon.csv
 - data: shocks.csv
+- data: spam-fit.csv
+- data: spam-test.csv
 - data: springbok.csv
 - data: sumsq.csv
 - data: TitanicSurvival.csv

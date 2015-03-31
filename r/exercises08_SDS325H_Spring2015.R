@@ -41,9 +41,13 @@ mysim = do(nmc)*{
 }
 sum(mysim)/nmc
 
+n = 500
+lbound = qbinom(0.025, size=n, prob=0.5)
+ubound = qbinom(0.975, size=n, prob=0.5)
+
 
 # Now the power calculation
-w_grid = seq(0, 1, by=0.01)
+w_grid = seq(0.4, 0.6, by=0.002)
 power_grid = rep(0, length(w_grid))  # pre-allocate a vector to store the result
 
 for(i in seq_along(w_grid)) {
