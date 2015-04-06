@@ -5,6 +5,7 @@
 - data: bballbets.csv
 - data: birthwt.csv
 - data: bodybrain.csv
+- data: brca.csv
 - data: carauction.csv
 - data: casandie.txt
 - data: chymotrypsin.csv
@@ -13,6 +14,8 @@
 - data: esdpredict.csv
 - data: ethanol.csv
 - data: fips.csv
+- data: flutrends.csv
+- data: flutrends2012.csv
 - data: gala.csv
 - data: gdpgrowth.csv
 - data: georgia2000.csv

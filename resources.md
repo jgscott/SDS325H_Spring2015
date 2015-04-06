@@ -19,11 +19,15 @@ This is in a state of continual editing, so I will post the
 * [Chapter 7]({{ site.baseurl }}/files/07-QuantifyingUncertaintyPart2.pdf)   
 * [Chapter 8]({{ site.baseurl }}/files/08-VariationInTime.pdf)  
 * [Chapter 9]({{ site.baseurl }}/files/09-BinaryOutcomes.pdf)  
+* [Summary notes]({{ site.baseurl }}/files/logit_poisson_cox.pdf) on logit, Poisson, and Cox survival models  
+
 
 ### Notes on probability
 * [Probability]({{ site.baseurl }}/files/probability.pdf)  
 * [Random variables]({{ site.baseurl }}/files/randomvariables.pdf)   
 * [Utility]({{ site.baseurl }}/files/utility.pdf)   
+
+
 
 
 Other readings
