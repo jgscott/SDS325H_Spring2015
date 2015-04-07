@@ -6,6 +6,7 @@
 - data: birthwt.csv
 - data: bodybrain.csv
 - data: brca.csv
+- data: brcanames.txt
 - data: carauction.csv
 - data: casandie.txt
 - data: chymotrypsin.csv
