@@ -4,6 +4,7 @@
 - data: baseballsalary.csv
 - data: bballbets.csv
 - data: birthwt.csv
+- data: bloodpressure.csv
 - data: bodybrain.csv
 - data: brca.csv
 - data: brcanames.txt
@@ -28,10 +29,12 @@
 - data: kidney.csv
 - data: marketmodel.csv
 - data: milk.csv
+- data: mtdna.csv
 - data: oil.txt
 - data: orings.csv
 - data: peakdemand.csv
 - data: pickup.csv
+- data: polls.csv
 - data: profs.csv
 - data: respir.csv
 - data: rxntime.txt

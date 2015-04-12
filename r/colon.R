@@ -25,7 +25,7 @@ recur.y = Surv(recur$time, recur$status)
 # Plot survival (Kaplan-Meier) curves
 sur1 = survfit(recur.y ~ rx, data=recur)
 plot(sur1, lty=1:3, mark=4:6, xlab="Days", ylab="Fraction Without Recurrence")
-legend("topright", legend=levels(recur$rx), lty=1:3) 
+legend("topright", legend=levels(recur$rx), lty=1:3, cex=0.5)
 
 # We could also suppress the marks for censored events.
 plot(sur1, lty=1:3, mark.time=FALSE, xlab="Days", ylab="Fraction Without Recurrence")
