@@ -44,9 +44,14 @@ xyplot(GPA ~ SAT.Q | School, data=ut2000)
 ut2000s = ut2000
 ut2000s[,c(1,2,3,5)] = scale(ut2000s[,c(1,2,3,5)])
 
+
+hlm1 = lmer(GPA ~ (1 | School) + (SAT.V | School) + (SAT.Q | School), data=ut2000s)
+coef(hlm1)
+summary(hlm2)
+
 # Now a mixed-effects model
 # This says allow the intercept and SAT.Q slopes to change among the groups
-hlm2 = lmer(GPA ~ SAT.V + SAT.Q + (1+SAT.Q | School), data=ut2000s)
+hlm2 = lmer(GPA ~ (1 + SAT.Q + SAT.V | School), data=ut2000s)
 coef(hlm2)
 summary(hlm2)
 
