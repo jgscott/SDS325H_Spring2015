@@ -45,6 +45,7 @@ xyplot(ubwnorm ~ log10(EE) | lab, data=assaywc)
 # have average ubwnorm = 1 by construction
 xtabs(~factor(ZM) + factor(EE), data=assaywc)
 assayEE = subset(assaywc, ZM==0)
+assayEE = subset(assayEE, EE > 0)
 assayZM = subset(assaywc, EE==3)
 
 
@@ -72,16 +73,27 @@ dotplot(r1.lab)
 r1.protocol = ranef(hlm1, condVar=TRUE, whichel="protocol")
 dotplot(r1.protocol)
 
-# Check the residuals
+# Check the fitted values and residuals
+bwplot(fitted(hlm1) ~ factor(EE) | protocol, data=assayEE)
+bwplot(fitted(hlm1) ~ factor(EE) | lab, data=assayEE)
+
 bwplot(resid(hlm1) ~ factor(EE) | protocol, data=assayEE)
 bwplot(resid(hlm1) ~ factor(EE) | lab, data=assayEE)
+
 
 # Random effects for each protocol/dosage combination
 # This attempts to ease out systematic differences due
 # to lab from those due to protocol/dosage combinations
-hlm2 = lmer(ubwnorm ~ factor(EE) + (1 | lab) + (factor(EE) | protocol), data=assayEE)
-
+hlm2 = lmer(ubwnorm ~ factor(EE) + (1 | lab) + (factor(EE) | protocol),
+            data=assayEE, control=)
 coef(hlm2)
+
+# Use a spline basis instead
+library(splines)
+bs1 = bs(log10(assayEE$EE), df=5, degree=2)
+
+hlm2 = lmer(ubwnorm ~  bs1 + (1 | lab) + (bs1 | protocol),
+            data=assayEE)
 
 r2.lab = ranef(hlm2, condVar=TRUE, whichel="lab")
 dotplot(r2.lab)
@@ -89,37 +101,16 @@ dotplot(r2.lab)
 r2.protocol = ranef(hlm2, condVar=TRUE, whichel="protocol")
 dotplot(r2.protocol)
 
-# Check the residuals
-bwplot(resid(hlm2) ~ factor(EE) | protocol, data=assayEE)
-bwplot(resid(hlm2) ~ factor(EE) | lab, data=assayEE)
+# Check the fitted values and residuals
+xyplot(fitted(hlm2) ~ log10(EE) | protocol, data=assayEE)
+xyplot(fitted(hlm2) ~ log10(EE) | lab, data=assayEE)
+
+xyplot(resid(hlm2) ~ log10(EE) | protocol, data=assayEE)
+xyplot(resid(hlm2) ~ log10(EE) | lab, data=assayEE)
 
 
 # Allow both labs andprotocols to have 
 # random effects at each level of dosage.
 # Still separable in lab/protocol at a given dosage level
-# This will take awhile!
-system.time(hlm3 <- lmer(ubwnorm ~ factor(EE) - 1  + (0 + factor(EE) | protocol) + (0 + factor(EE) | lab), data=assayEE, control=list(maxIter = 2000, maxFN=6000)) )
 
-r3.lab = ranef(hlm3, condVar=TRUE, whichel="lab")
-dotplot(r3.lab)
-
-r3.protocol = ranef(hlm3, condVar=TRUE, whichel="protocol")
-dotplot(r3.protocol)
-
-# Check the residuals
-bwplot(resid(hlm3) ~ factor(EE) | protocol, data=assayEE)
-bwplot(resid(hlm3) ~ factor(EE) | lab, data=assayEE)
-
-
-
-summary(hlm3)
-
-# compare this to an ordinary fixed-effects model
-lm3 = lm(ubwnorm ~ factor(EE) + protocol + lab + factor(EE):protocol + factor(EE):lab, data=assayEE)
-
-# Similar fitted values
-plot(fitted(lm3), fitted(hlm3))
-abline(0,1)
-
-# But the linear model is harder to interpret
-summary(lm3)
+hlm3 = lmer(ubwnorm ~  bs1 + (bs1 | lab) + (bs1 | protocol), data=assayEE)
