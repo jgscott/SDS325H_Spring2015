@@ -16,6 +16,12 @@ BenjaminiHochberg = function(zscores, fdr_level) {
   0+{pval2 <= bhcut2}
 }
 
+m = length(hiv$z)
+alpha = 0.1
+pval2 = 2*pmin(pnorm(hiv$z), 1- pnorm(hiv$z))
+plot(sort(pval2))
+plot(sort(pval2), xlim=c(0,50), ylim=c(0, 0.001))
+abline(0, alpha/m, col='red')
 
 hist(hiv$z, breaks=100, prob=TRUE, col='grey', border=NA)
 fdr1 = BenjaminiHochberg(hiv$z, 0.1)
