@@ -39,6 +39,9 @@ assaywc$ubwnorm = assaywc$lubw - assaywc$lubw.control
 
 
 xyplot(ubwnorm ~ log10(EE) | lab, data=assaywc)
+xyplot(ubwnorm ~ log10(EE) | protocol, data=assaywc)
+
+
 
 # Split the data set into the two sub-experiments
 # We can leave out the controls in the EE data, which
@@ -48,6 +51,7 @@ assayEE = subset(assaywc, ZM==0)
 assayEE = subset(assayEE, EE > 0)
 assayZM = subset(assaywc, EE==3)
 
+xtabs(~lab + protocol, data=assaywc)
 
 # Now EDA with the redefined variable
 xyplot(ubwnorm ~ log10(EE) | protocol, data=assayEE)
@@ -85,8 +89,13 @@ bwplot(resid(hlm1) ~ factor(EE) | lab, data=assayEE)
 # This attempts to ease out systematic differences due
 # to lab from those due to protocol/dosage combinations
 hlm2 = lmer(ubwnorm ~ factor(EE) + (1 | lab) + (factor(EE) | protocol),
-            data=assayEE, control=)
+            data=assayEE)
 coef(hlm2)
+
+r2.protocol = ranef(hlm2, condVar=TRUE, whichel="protocol")
+dotplot(r2.protocol)
+
+
 
 # Use a spline basis instead
 library(splines)
