@@ -12,5 +12,6 @@
 - r: mtdna.R
 - r: OrchardSprays.R
 - r: polls.R
+- r: seatbelts.R
 - r: titanic.R
 - r: ut2000-mm.R
