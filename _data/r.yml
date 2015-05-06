@@ -1,6 +1,8 @@
 - r: bballbets.R
 - r: bloodpressure.R
+- r: cars.R
 - r: colon.R
+- r: congress109.R
 - r: exercises05_SDS325H_Spring2015.R
 - r: exercises06_SDS325H_Spring2015.R
 - r: exercises08_SDS325H_Spring2015.R
@@ -11,6 +13,7 @@
 - r: flutrends.R
 - r: mtdna.R
 - r: OrchardSprays.R
+- r: pca_intro.R
 - r: polls.R
 - r: seatbelts.R
 - r: titanic.R

@@ -9,8 +9,12 @@
 - data: brca.csv
 - data: brcanames.txt
 - data: carauction.csv
+- data: cars.csv
 - data: casandie.txt
 - data: chymotrypsin.csv
+- data: climate.csv
+- data: congress109.csv
+- data: congress109members.csv
 - data: cps85.csv
 - data: creatinine.csv
 - data: esdpredict.csv
